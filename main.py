@@ -5,7 +5,7 @@ import json
 
 def get_weather():
     city = city_entry.get()
-    url = f"https://api.weatherapi.com/v1/current.json?key=813e7077a15640be80d51040232110&q={city}"
+    url = f"https://api.weatherapi.com/v1/current.json?key={API_KEY}&q={city}"
     r = requests.get(url)
     wdic = json.loads(r.text)
     temp_c = wdic['current']['temp_c']
